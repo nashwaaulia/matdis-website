@@ -1,0 +1,870 @@
+:root {
+  --bg: rgb(191, 224, 226);
+  --primary: #7da2a9;
+}
+
+/* Reset default margin dan padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Membuat tampilan full width */
+body,
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  background-color: #f6f8d5d0;
+  height: 100%;
+}
+
+/* Container navbar */
+.container-header {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Posiszikan navbar di tengah secara horizontal */
+  position: absolute;
+  top: 20px; /* Atur navbar agar tetap di bagian atas */
+  left: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Tetap di atas saat scroll */
+  top: 20px; /* Jarak dari atas */
+  left: 50%; /* Posisi tengah */
+  transform: translateX(-50%); /* Pusatkan secara horizontal */
+  width: 50%; /* Atur lebar navbar */
+  height: 80px; /* Sesuaikan tinggi navbar */
+  background-color: #98d2c0cf; /* Pastikan warna terlihat */
+  box-shadow: 0 5px 15px rgb8c78ba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 9999; /* Pastikan navbar tidak tertutup elemen lain */
+}
+
+.toggle-button {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+  background-color: #98d2c0eb;
+  color: #205781;
+  font-size: 24px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.side-navbar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #44707dec;
+  padding-top: 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  color: #e2e2e2;
+}
+
+/* Saat aktif (muncul) */
+.side-navbar.active {
+  left: 0;
+  width: 300px;
+}
+
+.side-navbar .side-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 17px;
+  color: #dbe8ea;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.side-navbar .side-navigation li {
+  margin-left: 60px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #444;
+}
+
+.side-navbar .side-navigation li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+}
+
+.side-navbar .side-navigation li a:hover {
+  background-color: #98d2c0cf;
+  border-radius: 5px;
+}
+
+/* Daftar navigasi */
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Nama brand */
+.firstname {
+  pointer-events: none; /* Mencegah klik pada brand */
+  font-size: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(150, 153, 152);
+  font-weight: bolder;
+  -webkit-text-stroke-width: 20%;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation > li {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 15px;
+  pointer-events: auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.navigation > li > a {
+  display: block;
+  width: 100%; /* Pastikan link bisa diklik penuh */
+  font-size: 18px;
+  color: rgb(95, 108, 116);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Hover efek */
+.navigation > li > a:hover {
+  background-color: rgb(208, 215, 215);
+  color: rgb(84, 100, 121);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Active state */
+.active {
+  color: rgb(22, 61, 61);
+  padding: 15px;
+}
+.hero {
+  min-height: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-materi {
+  min-height: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero .desktop-1 .vector-2-Ys8k0x {
+  height: 3000px;
+  left: 600px;
+  position: fixed;
+  top: 0px;
+  width: 1050px;
+  z-index: 0;
+}
+
+.hero .desktop-1 .vector-1-Ys8k0x {
+  height: 3000px;
+  left: 800px;
+  position: fixed;
+  top: 0px;
+  width: 1050px;
+  z-index: 0;
+}
+
+.hero .desktop-1 .frame-13-Ys8k0x {
+  border-radius: 40px;
+  height: 604px;
+  right: 400px;
+  position: fixed;
+  top: 129px;
+  transform: rotate(-30.35deg);
+  width: 300px;
+}
+
+.hero h1 {
+  align-items: left;
+  text-align: left;
+  left: 75px;
+  top: 240px;
+  font-size: 70px;
+  font-weight: 20px;
+  color: #333;
+  position: absolute;
+  font-family: system-ui;
+}
+
+.hero p {
+  align-items: left;
+  text-align: left;
+  left: 75px;
+  top: 330px;
+  font-size: 20px;
+  color: #333;
+  position: absolute;
+  font-family: system-ui;
+}
+
+.hero .btn-1 {
+  background-color: #4f959d;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  height: 84px;
+  left: 75px;
+  position: absolute;
+  top: 385px;
+  width: 304px;
+  color: rgb(208, 215, 215);
+  font-style: normal;
+  font-weight: 900;
+  font-size: large;
+  letter-spacing: 0px;
+  line-height: normal;
+}
+
+.hero-materi h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #205781;
+  margin-bottom: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Pusatkan tombol */
+.hero.hero-materi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 40px;
+  background-color: #fff; /* misalnya beda */
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button-group {
+  text-align: center;
+}
+
+.btn-2 {
+  background-color: #deeff3;
+  border-radius: 30px;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  overflow: hidden;
+  border: 2px solid #444;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn-2 img {
+  width: 80%;
+  height: auto;
+}
+
+.button-text {
+  margin-top: 8px;
+  font-weight: 800;
+  color: #205781;
+  font-size: 25px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Styling tombol */
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn img {
+  width: 80px; /* Ukuran gambar tombol */
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover efek */
+.btn:hover img {
+  transform: scale(1.1);
+}
+
+footer {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #4f959d;
+  justify-items: center;
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 2.3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: white;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: black;
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: white;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: white;
+  font-weight: 700;
+}
+
+/* STYLE UNTUK HALAMAN PERMUTASI */
+/* HEADER PERMUTASI */
+.header-permutasi {
+  background-color: #4f959d;
+  padding: 60px 20px;
+  text-align: center;
+  color: #ede7d1eb;
+  font-size: 40px;
+}
+
+.header-permutasi h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.header-permutasi .video-wrapper {
+  margin-top: 20px;
+}
+
+.header-permutasi iframe {
+  width: 80%;
+  height: 300px;
+  max-width: 560px;
+  border-radius: 12px;
+}
+
+.video iframe {
+  margin-bottom: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.video-item {
+  max-width: 560px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.video-item iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  border: none;
+}
+.video-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* SECTION PERMUTASI */
+.permutasi-section {
+  padding: 40px 60px;
+  background-color: #f0f1db;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  color: #214a4f;
+  font-size: large;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.permutasi-section h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #37706c;
+}
+
+.permutasi-section p,
+.permutasi-section ul {
+  font-size: 16px;
+  color: #3d3939;
+  line-height: 1.6;
+}
+
+.permutasi-section img {
+  display: block;
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+/* TAMBAHAN */
+.permutasi-section ul {
+  padding-left: 20px;
+}
+
+.permutasi-section ul li {
+  margin-bottom: 8px;
+}
+
+/* STYLE UNTUK HALAMAN KOBINASI */
+
+.header-kombinasi {
+  background-color: #4f959d;
+  padding: 50px;
+  text-align: center;
+  color: rgb(224, 228, 190);
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.header-kombinasi .header-image {
+  width: 200px;
+  height: 150px;
+  background-color: #dbe8ea;
+  margin: 20px auto 0;
+}
+
+.header-kombinasi .video-wrapper {
+  margin-top: 20px;
+}
+
+.header-kombinasi iframe {
+  width: 80%;
+  height: 300px;
+  max-width: 560px;
+  border-radius: 12px;
+}
+
+.video iframe {
+  margin-bottom: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-kombinasi {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.video-item-kombinasi {
+  min-width: 300px;
+  width: 45%;
+}
+
+.video-item-kombinasi iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  border: none;
+}
+
+.video-text-kombinasi {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1160px) {
+  .video-kombinasi {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* css section combinasi */
+.kombinasi-section {
+  padding: 40px 60px;
+  background-color: #f0f1db;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  color: #214a4f;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.kombinasi-section h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #214a4f;
+}
+
+.kombinasi-section h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #597477;
+}
+
+.kombinasi-section h4 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #595a5c;
+}
+.kombinasi-section p,
+.kombinasi-section ul {
+  font-size: 16px;
+  color: #3d3939;
+  line-height: 1.6;
+}
+
+.rumus-img {
+  display: block;
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+/* HALAMAN KESIMPULAN */
+.header-kesimpulan {
+  background-color: #4f959d;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.header-kesimpulan .header-image {
+  width: 200px;
+  height: 150px;
+  background-color: #dbe8ea;
+  margin: 20px auto 0;
+}
+
+.header-kesimpulan .video-wrapper {
+  margin-top: 20px;
+}
+
+.header-kesimpulan iframe {
+  width: 80%;
+  height: 300px;
+  max-width: 560px;
+  border-radius: 12px;
+}
+
+.kesimpulan-section {
+  padding: 40px 60px;
+  background-color: #f0f1db;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+}
+
+.kesimpulan-section h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #2c2c2c;
+}
+
+.kesimpulan-section p,
+.kesimpulan-section ul {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* style button mengarah ke halaman kesimpulan */
+.button-kes {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button-kesimpulan {
+  text-align: center;
+}
+
+.btn-kes {
+  background-color: #deeff3;
+  border-radius: 30px;
+  height: 120px;
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  overflow: hidden;
+  border: 2px solid #444;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn-kes img {
+  width: 80%;
+  height: auto;
+}
+
+.button-text-kesimpulan {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  color: #205781;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* STYLE HALAMAN ABOUT US */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.aboutus {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 150px;
+  margin-bottom: 10px;
+  font-size: 40px;
+  align-items: center;
+  text-align: center;
+  color: #37706c;
+  font-weight: bolder;
+}
+
+.about-wrapper {
+  display: flex;
+  background-color: rgb(255, 253, 229 / 0%);
+  width: 100%;
+  padding: 0 40px; /* padding kiri & kanan 40px */
+  box-sizing: border-box; /* supaya padding tidak bikin overflow */
+  gap: 0;
+}
+
+.left-column,
+.right-column {
+  background-color: #26435cce;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-column {
+  padding: 0px;
+  margin: 0;
+  width: 50%;
+}
+
+.right-column {
+  color: #e2e2e2;
+  font-size: large;
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.person {
+  text-align: center;
+  background-image: transparent;
+}
+
+.person img {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  margin-top: 7px;
+}
+
+.halfbody-img {
+  width: 120px;
+  height: auto;
+  border-radius: 100px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.username {
+  margin: 15px auto;
+  margin-top: 20px;
+  background-color: #e2e2e2;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 20px;
+  width: fit-content;
+  color: #214a4f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.quote {
+  margin-right: 20px;
+  margin-bottom: 220px;
+  text-align: center;
+}
+
+.divider {
+  background-color: #26435cce;
+  width: 10%;
+  background-size: cover;
+}
+
+.sec-2 h1 {
+  margin: 15px auto;
+  background-color: #b7d7cf;
+  padding: 15px 20px;
+  border-radius: 20px;
+  font-size: 30px;
+  width: fit-content;
+  color: #214a4f;
+  text-align: center;
+  margin-top: 35px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.dokumentasi-video {
+  align-items: center;
+  justify-content: center;
+}
+.sec-2 {
+  background-color: #26435cce;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.sec-2 iframe {
+  width: 80%;
+  height: 300px;
+  max-width: 560px;
+  border-radius: 12px;
+}
+
+.sec-2 .header-image {
+  width: 200px;
+  height: 150px;
+  background-color: #dbe8ea;
+  margin: 20px auto 0;
+}
+
+.sec-2 .video-wrapper {
+  margin-top: 20px;
+}
+
+.dokumentasi-text {
+  color: #205781;
+  padding: 10px 100px;
+  background-color: #b5cbced4;
+  text-align: center;
+  margin-top: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.dokumentasi-video {
+  text-align: center;
+  justify-content: center;
+}
+
+.video-text {
+  align-content: center;
+}
+
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
+  .divider {
+    display: none; /* sembunyikan garis tengah di versi mobile */
+  }
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}

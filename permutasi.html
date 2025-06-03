@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Permutasi</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="header-permutasi">
+      <h1>PERMUTASI</h1>
+      <div class="header-video">
+        <div class="video">
+          <div class="video-item">
+            <p class="video-text">MATERI PERMUTASI</p>
+            <iframe
+              width="400"
+              height="225"
+              src="https://www.youtube.com/embed/8htCPaHwT7s?si=nrtYZ4aI-lNkmlUR"
+              title="Video Materi Permutasi"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="video-item">
+            <p class="video-text">CONTOH SOAL PERMUTASI</p>
+            <iframe
+              width="400"
+              height="225"
+              src="https://www.youtube.com/embed/hcJyPc8OWMQ?si=ti8Ta6QkAiZLffev"
+              title="Video Contoh Soal Permutasi"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <button id="toggle-btn" class="toggle-button">&#9776;</button>
+    <nav class="side-navbar" id="sidebar">
+      <ul class="side-navigation">
+        <li class="firstname">PERSIKOPAT</li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="materi.html" class="active">Materi</a></li>
+        <li><a href="aboutus.html" class="active">About Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Section 1: Apa itu Permutasi -->
+    <section class="permutasi-section">
+      <h2>Apa itu Permutasi?</h2>
+      <p>
+        Permutasi adalah penyusunan suatu kelompok objek dengan memperhatikan
+        urutan. Dalam permutasi, perubahan urutan akan menghasilkan susunan yang
+        berbeda.
+      </p>
+      <p>
+        Contoh: Jika terdapat tiga huruf: A, B, dan C, maka susunan yang dapat
+        dibentuk berupa ABC, ACB, BAC, BCA, CAB, CBA.
+      </p>
+    </section>
+
+    <!-- Section 2: Rumus Permutasi -->
+    <section class="permutasi-section">
+      <h2>Rumus</h2>
+      <p>
+        Untuk menghitung banyaknya susunan berbeda dari n objek yang dipilih
+        sebanyak r objek, digunakan rumus:
+      </p>
+      <img src="src/img/rumuspermutasi.png" alt="Rumus Permutasi" />
+      <p>
+        Di mana n! (n faktorial) adalah hasil perkalian semua bilangan dari n
+        hingga 1:
+      </p>
+      <p>4! = 4 × 3 × 2 × 1 = 24<br />5! = 5 × 4 × 3 × 2 × 1 = 120</p>
+    </section>
+
+    <!-- Section 3: Jenis Permutasi -->
+    <section class="permutasi-section">
+      <h2>Jenis Permutasi</h2>
+      <h3>1. Permutasi Dengan Objek Sama</h3>
+      <p>
+        Jika terdapat objek yang sama dalam suatu kelompok, digunakan rumus:
+      </p>
+      <img src="src/img/rumuspermutasi1.png" alt="Rumus objek sama" />
+
+      <h3>2. Permutasi Siklis</h3>
+      <p>
+        Jika objek disusun dalam bentuk lingkaran, jumlah susunan berbeda
+        dihitung dengan:
+      </p>
+      <img src="src/img/rumuspermutasi2.png" alt="Permutasi siklis" />
+
+      <h3>3. Permutasi Dengan Syarat Tertentu</h3>
+      <ul>
+        <li>Beberapa kasus mengharuskan objek dalam urutan khusus, seperti:</li>
+        <li>Objek harus selalu berdampingan</li>
+        <li>Objek tidak boleh berdampingan</li>
+      </ul>
+    </section>
+
+    <!-- Section 3: Contoh Soal Permutasi -->
+    <section class="permutasi-section">
+      <h2>Contoh Soal Permutasi</h2><br>
+      <h3>1. Contoh Soal Permutasi Siklis</h3>  
+      <h4>Suatu kelompok belajar terdiri dari 7 orang duduk melingkar.<br> Berapa banyaknya formasi duduk yang dapat mereka lakukan ?</h4><br>
+      <h3>2. Permutasi Dengan Objek Sama</h3>
+      <h4>Dari 10 siswa yang ada di kelas akan dipilih 3 orang menjadi Ketua, sekretaris dan Bendahara.<br>
+        Berapa banyak cara untuk memilihnya?</h4><br>
+      <h3>3. Permutasi Dengan Syarat tertentu</h3>  
+      <h4>Berapa banyak bilangan yang terdiri dari 3 angka yang dapat dibuat dari angka-angka 1,2,3,4, dan 5<br> jika tidak boleh ada angka yang diulang?</h4><br>
+      <h3>4. Contoh Soal Permutasi Analisis</h3>  
+      <h4>berapa banyak susunan berbeda yang dapat dibentuk dari kata HARGA dan BUBUR</h4>
+    </section>
+
+    <div class="button-kes">
+    <div class="button-kesimpulan">      
+      <p class="button-text-kesimpulan"> CEK KESIMPULANNYA DISINI! </p>
+      <a href="kesimpulan.html" class="btn-kes">
+        <img src="src/img/kesimpulan.png" alt="Gambar 2" />
+      </a>
+    </div>
+  </div>
+</div>
+    <footer>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="materi.html">Materi</a>
+      </div>
+
+      <div class="credit">
+        <p>Created by <a href="aboutus.html">Kelompok 4</a>. | &copy; 2025</p>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
